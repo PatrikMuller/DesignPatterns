@@ -5,45 +5,47 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AbstractFactory
+//{
+//    class AbstractFactory
+//    {
+//    }
+//}
+
 {
-    class AbstractMethod
+    /// <summary>
+    /// MainApp startup class for Structural
+    /// Abstract Factory Design Pattern.
+    /// </summary>
+
+    class MainApp
+
     {
-        //http://www.dofactory.com/net/abstract-factory-design-pattern
-
         /// <summary>
-
         /// Entry point into console application.
-
         /// </summary>
 
         public static void Main()
         {
             // Abstract factory #1
-
             AbstractFactory factory1 = new ConcreteFactory1();
             Client client1 = new Client(factory1);
             client1.Run();
 
             // Abstract factory #2
-
             AbstractFactory factory2 = new ConcreteFactory2();
             Client client2 = new Client(factory2);
             client2.Run();
 
             // Wait for user input
-
             Console.ReadKey();
         }
     }
 
     /// <summary>
-
     /// The 'AbstractFactory' abstract class
-
     /// </summary>
 
     abstract class AbstractFactory
-
     {
         public abstract AbstractProductA CreateProductA();
         public abstract AbstractProductB CreateProductB();
@@ -51,13 +53,10 @@ namespace AbstractFactory
 
 
     /// <summary>
-
     /// The 'ConcreteFactory1' class
-
     /// </summary>
 
     class ConcreteFactory1 : AbstractFactory
-
     {
         public override AbstractProductA CreateProductA()
         {
@@ -70,13 +69,10 @@ namespace AbstractFactory
     }
 
     /// <summary>
-
     /// The 'ConcreteFactory2' class
-
     /// </summary>
 
     class ConcreteFactory2 : AbstractFactory
-
     {
         public override AbstractProductA CreateProductA()
         {
@@ -89,48 +85,37 @@ namespace AbstractFactory
     }
 
     /// <summary>
-
     /// The 'AbstractProductA' abstract class
-
     /// </summary>
 
     abstract class AbstractProductA
-
     {
+
     }
 
     /// <summary>
-
     /// The 'AbstractProductB' abstract class
-
     /// </summary>
 
     abstract class AbstractProductB
-
     {
         public abstract void Interact(AbstractProductA a);
     }
 
 
     /// <summary>
-
     /// The 'ProductA1' class
-
     /// </summary>
 
     class ProductA1 : AbstractProductA
-
     {
     }
 
     /// <summary>
-
     /// The 'ProductB1' class
-
     /// </summary>
 
     class ProductB1 : AbstractProductB
-
     {
         public override void Interact(AbstractProductA a)
         {
@@ -140,24 +125,19 @@ namespace AbstractFactory
     }
 
     /// <summary>
-
     /// The 'ProductA2' class
-
     /// </summary>
 
     class ProductA2 : AbstractProductA
-
     {
+
     }
 
     /// <summary>
-
     /// The 'ProductB2' class
-
     /// </summary>
 
     class ProductB2 : AbstractProductB
-
     {
         public override void Interact(AbstractProductA a)
         {
@@ -167,19 +147,15 @@ namespace AbstractFactory
     }
 
     /// <summary>
-
     /// The 'Client' class. Interaction environment for the products.
-
     /// </summary>
 
     class Client
-
     {
         private AbstractProductA _abstractProductA;
         private AbstractProductB _abstractProductB;
 
         // Constructor
-
         public Client(AbstractFactory factory)
         {
             _abstractProductB = factory.CreateProductB();

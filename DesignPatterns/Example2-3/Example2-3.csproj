@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C48635C-C163-4EB9-BDEA-A735E155414C}</ProjectGuid>
+    <ProjectGuid>{4C1B9E4D-197D-4578-8BD9-07DF71B20EF1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory</RootNamespace>
-    <AssemblyName>AbstractFactory</AssemblyName>
+    <RootNamespace>Example2_3</RootNamespace>
+    <AssemblyName>Example2-3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
